@@ -8,7 +8,7 @@
  */
 stack_t *add_node(stack_t **stack, const int n)
 {
-	stack_t *new malloc(sizeof(stack_t));
+	stack_t *new = malloc(sizeof(stack_t));
 
 	if (new == NULL)
 	{
@@ -16,7 +16,7 @@ stack_t *add_node(stack_t **stack, const int n)
 		free(new);
 		return (NULL);
 	}
-	new->next = n;
+	new->n = n;
 	new->next = *stack;
 	new->prev = NULL;
 	if (*stack)

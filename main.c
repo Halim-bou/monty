@@ -22,8 +22,8 @@ int main(int argc, char **argv)
 		error_usage();
 	file = fopen(argv[1], "r");
 	if (!file)
-		error_file(arv[1]);
-	while ((getline(&buffer, &len_buf)) != -1)
+		error_file(argv[1]);
+	while ((getline(&buffer, &len_buf, file)) != -1)
 	{
 		if (var)
 			break;
@@ -38,7 +38,7 @@ int main(int argc, char **argv)
 			line_num++;
 			continue;
 		}
-		glob_helper = strtok(NULL, " \t\n");
+		glob_helper.argument = strtok(NULL, " \t\n");
 		opcode(&stack, str, line_num);
 		line_num++;
 	}
@@ -63,7 +63,7 @@ void error_file(char *argv)
  * error_usage - ....
  * Return: Nothing
  */
-void error_usage(void);
+void error_usage(void)
 {
 	fprintf(stderr, "USAGE: monty file\n");
 	exit(EXIT_FAILURE);

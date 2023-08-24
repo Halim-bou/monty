@@ -18,7 +18,7 @@ void push(stack_t **stack, unsigned int line_num)
 	if (glob_helper.data == 1)
 	{
 		if (!add_node(stack, atoi(glob_helper.argument)))
-			exit(Exit_Failure);
+			exit(EXIT_FAILURE);
 	}
 	else
 	{
