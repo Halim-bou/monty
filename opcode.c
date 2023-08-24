@@ -13,6 +13,7 @@ void opcode(stack_t **stack, char *str, unsigned int line_num)
 	instruction_t op[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", pint},
 		{NULL, NULL}
 	};
 	if (!strcmp(str, "stack"))
@@ -34,6 +35,6 @@ void opcode(stack_t **stack, char *str, unsigned int line_num)
 		}
 		i++;
 	}
-	fprintf(stderr, "L%d: unkown instruction %s\n", line_num, str);
+	fprintf(stderr, "L%d: unknown instruction %s\n", line_num, str);
 	exit(EXIT_FAILURE);
 }
