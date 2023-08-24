@@ -2,7 +2,7 @@
 
 /**
  * is_digit - check if a string is digit
- * @string: string to be checked
+ * @str: string to be checked
  * Return: 1 , or 0 if it fieled
  */
 int is_digit(char *str)
@@ -13,7 +13,7 @@ int is_digit(char *str)
 		str++;
 	while (*str)
 	{
-		if(isdigit(*str) == 0)
+		if (isdigit(*str) == 0)
 			return (0);
 		str++;
 	}
