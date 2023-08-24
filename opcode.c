@@ -4,12 +4,13 @@
  * opcode - func for ranning builtins
  * @stack: the given stack
  * @str: compered string
+ * @line_num: ...
  * Return: Nothing
  */
 void opcode(stack_t **stack, char *str, unsigned int line_num)
 {
 	int i = 0;
-	instruction_t op[]= {
+	instruction_t op[] = {
 		{"push", push},
 		{"pall", pall},
 		{NULL, NULL}
