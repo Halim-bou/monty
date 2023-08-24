@@ -59,5 +59,7 @@ stack_t *add_node(stack_t **stack, const int n);
 stack_t *queue_node(stack_t **stack, const int n);
 void free_stack(stack_t *stack);
 size_t print_stack(const stack_t *stack);
+/*function that help*/
+int is_digit(char *str);
 
 #endif /*_MONTY_H*/

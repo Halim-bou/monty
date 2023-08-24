@@ -10,7 +10,7 @@ stack_t *add_node(stack_t **stack, const int n)
 {
 	stack_t *new = malloc(sizeof(stack_t));
 
-	if (new == NULL)
+	if (!new)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
 		free(new);
@@ -36,13 +36,13 @@ stack_t *queue_node(stack_t **stack, const int n)
 	stack_t *new = malloc(sizeof(stack_t));
 	stack_t *current = *stack;
 
-	if (new == NULL)
+	if (!new)
 	{
 		free(new);
 		return (NULL);
 	}
 	new->n = n;
-	if (!(*stack))
+	if (!*stack)
 	{
 		new->next = NULL;
 		new->prev = NULL;
@@ -91,7 +91,7 @@ void free_stack(stack_t *stack)
 	stack_t *current = stack;
 	stack_t *next;
 
-	if (stack != NULL)
+	if (stack)
 	{
 		next = stack->next;
 		while (current)

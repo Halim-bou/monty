@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 		if (*buffer == '\n')
 		{
 			line_num++;
-			break;
+			continue;
 		}
 		str = strtok(buffer, " \t\n");
 		if (!str || *str == '#')
