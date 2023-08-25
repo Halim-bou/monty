@@ -14,6 +14,7 @@ void opcode(stack_t **stack, char *str, unsigned int line_num)
 		{"push", push},
 		{"pall", pall},
 		{"pint", pint},
+		{"pop", pop},
 		{NULL, NULL}
 	};
 	if (!strcmp(str, "stack"))
