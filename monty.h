@@ -55,6 +55,7 @@ void pall(stack_t **stack, unsigned int line_num);
 void opcode(stack_t **stack, char *str, unsigned int line_num);
 void pint(stack_t **stack, unsigned int line_num);
 void pop(stack_t **stack, unsigned int line_num);
+void swap(stack_t **stack, unsigned int line_num);
 
 /*functions available in linked_list*/
 stack_t *add_node(stack_t **stack, const int n);

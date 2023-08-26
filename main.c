@@ -1,4 +1,5 @@
 #include "monty.h"
+#include <stdio.h>
 void error_file(char *argv);
 void error_usage(void);
 int var = 0;
@@ -23,7 +24,7 @@ int main(int argc, char **argv)
 	file = fopen(argv[1], "r");
 	if (!file)
 		error_file(argv[1]);
-	while ((getline(&buffer, &len_buf, file)) != -1)
+	while (getline(&buffer, &len_buf, file) != -1)
 	{
 		if (var)
 			break;
